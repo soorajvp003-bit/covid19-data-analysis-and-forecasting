@@ -1,0 +1,7 @@
+step,description
+Dataset loading,Read the CSV from a local file or the official Our World in Data URL into a Pandas DataFrame.
+Feature selection,"Keep only the columns needed for cases, deaths, vaccination, population, and country/date identifiers to reduce noise."
+Date formatting,"Convert the `date` column to a datetime format so trend plots, rolling averages, and forecasting models work correctly."
+Duplicate removal,Remove duplicate `location` + `date` records to ensure one daily observation per region.
+Missing value handling,Forward-fill cumulative metrics within each country and replace missing daily metrics with 0 where appropriate.
+Data transformation,"Create rolling averages, growth rates, per-million indicators, death rate, vaccination shares, and recovery trend proxies."
